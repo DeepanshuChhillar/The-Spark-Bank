@@ -8,8 +8,10 @@
 <body>
     <h1>Heyh! Please Enter the Details!></h1>
     <form action="http://localhost:3000/createUser" method="post">
-        <input type="text" name="Name"><br>
-        <input type="number" name="Amount"><br>
+        <label id="Name">Name: </label>
+        <input for="Name" type="text" name="Name"><br>
+        <label id="Amount">Amount: </label>
+        <input for="Amount" type="number" name="Amount"><br>
         <input type="submit" value="Submit!">     
     </form>
 </body>

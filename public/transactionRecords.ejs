@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tranasction Records: </h1>
+    <%console.log("Reached Here!");%>
+    <% for(var i=0;i<logBooks.length;i++) {%>
+    <p>
+    " : "<%=logBooks[i].serialNo%>" : "<%=logBooks[i].senderId%>" : "<%=logBooks[i].senderName%>" : "<%=logBooks[i].reciverId%>
+    " : "<%=logBooks[i].reciverName%>" : "<%=logBooks[i].transactionAmount%>" : "<%=logBooks[i].transactionResult%>" : "
+    <%=logBooks[i].transactionDate%>" : "
+    </p>
+    <%}%>
+</body>
+</html>
