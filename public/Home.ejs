@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="./home_style.css" rel="stylesheet">
 </head>
 <body>
     <h1>Details Are: </h1><br>
     <% for(var i=0;i<myArr.length;i++) { %>
+    <%=myArr[i].userId%>
     <%=myArr[i].userName%>...
     <%=myArr[i].balanceAmount%>
     <br>
     <% } %>
+    <button><a href="/addUsers">Add People</a></button>
+    <button><a href="moneyTransfer">Send Money</a></button>
 </body>
 </html>

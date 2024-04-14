@@ -7,8 +7,22 @@ const port=3000;
 const dir_name=dirname(fileURLToPath(import.meta.url));
 const app=express();
 
-var mainDb=[];
-var idCount=0;
+var mainDb=[{
+    userName: "Bhai",
+    balanceAmount: 5000,
+    userId: "SBank2024001"
+},
+{
+    userName: "Tingo",
+    balanceAmount: 50000,
+    userId: "SBank2024002"
+},
+{
+    userName: "Deepu",
+    balanceAmount: 8000,
+    userId: "SBank2024003"
+}];
+var idCount=3;
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static("public"));
@@ -20,20 +34,20 @@ console.log("Server Activated: ",port);
 
 app.get('/', (req,res) => {
     res.locals={
-        name: "Deep",
+        myArr: mainDb
     };
-    res.render(dir_name+"/public/index.ejs");
+    res.render(dir_name+"/public/Home.ejs");
 });
 
 app.post("/createUser", (req,res) => 
 {
     idCount++;
-    var obj={
+    var obj1={
         userName: req.body["Name"],
         balanceAmount: req.body["Amount"],
-        userId: idCount
+        userId: "SBank202400"+idCount
     }
-    mainDb.push(obj);
+    mainDb.push(obj1);
     console.log(mainDb);
     res.redirect("/userDetails");
 });
@@ -42,7 +56,28 @@ app.get("/userDetails", (req,res) => {
     res.locals={
         myArr: mainDb
     };
-    res.render(dir_name+"/public/accDetails.ejs");
+    res.render(dir_name+"/public/Home.ejs");
 });
 
+app.post("/tranferRequest", (req,res) => {
+    console.log(req.body);
+    res.redirect("/userDetails");
+});
 
+app.get("/addUsers", (req,res) => 
+{
+    res.locals={
+        myArr: mainDb
+    };
+    res.render(dir_name+"/public/addUsers.ejs");
+
+});
+
+app.get("/moneyTransfer", (req,res) => 
+{
+    res.locals={
+        myArr: mainDb
+    };
+    res.render(dir_name+"/public/moneyTransfer.ejs");
+
+});

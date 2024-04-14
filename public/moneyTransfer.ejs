@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://localhost:3000/tranferRequest" method="post">
+    <select id="changeIT" name="from" >
+        <% for(var i=0;i<myArr.length;i++) {%>
+        <option value=<%=myArr[i].userId%>><%=myArr[i].userId%>||<%=myArr[i].userName%></option>
+        <%}%>
+    </select><br>
+    <select name="to">
+    <% for(var i=0;i<myArr.length;i++) {%>
+        if()
+    <option value=<%=myArr[i].userId%>><%=myArr[i].userId%>||<%=myArr[i].userName%></option>
+    <%}%>
+    </select><br>
+    <input name="Amount" type="number">
+    <input type="submit" value="Submit!">
+    </form>
+    <button id="abcd">heyh!</button>
+    <script src="./script.js" charset="UTF-8"></script>
+</body>
+</html>
