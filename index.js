@@ -42,9 +42,10 @@ app.get('/', (req,res) => {
 app.post("/createUser", (req,res) => 
 {
     idCount++;
+    var valu=parseInt(req.body["Amount"]);
     var obj1={
         userName: req.body["Name"],
-        balanceAmount: req.body["Amount"],
+        balanceAmount: valu,
         userId: "SBank202400"+idCount
     }
     mainDb.push(obj1);
@@ -60,7 +61,17 @@ app.get("/userDetails", (req,res) => {
 });
 
 app.post("/tranferRequest", (req,res) => {
-    console.log(req.body);
+    var from=req.body["from"];
+    var to=req.body["to"];
+    var amtt=req.body["Amount"];
+    var amt=-1;
+    if(mainDb[from].balanceAmount>=amt)
+    {
+        amt=parseInt(amtt);
+        mainDb[to].balanceAmount+=amt;
+        mainDb[from].balanceAmount-=amt;
+    }    
+    console.log(from,to,amt);
     res.redirect("/userDetails");
 });
 
