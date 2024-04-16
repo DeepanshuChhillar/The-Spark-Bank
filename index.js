@@ -41,6 +41,7 @@ app.post("/createUser", (req, res) => {
     var obj1 = {
         userName: req.body["Name"],
         balanceAmount: valu,
+        gender: req.body["gender"],
         userId: "SBank202400" + idCount
     }
     mainDb.push(obj1);

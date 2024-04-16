@@ -4,18 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="./Styling/home_style.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Details Are: </h1><br>
-    <% for(var i=0;i<myArr.length;i++) { %>
-    <%=myArr[i].userId%>
-    <%=myArr[i].userName%>...
-    <%=myArr[i].balanceAmount%>
-    <br>
-    <% } %>
-    <button><a href="/addUsers">Add People</a></button>
-    <button><a href="/moneyTransfer">Send Money</a></button>
-    <button><a href="/tranasctionHistory">Tranasction Details</a></button>
+        <div class="container">
+            <div class="box1">
+                <img src="./Styling/img4.png"  alt="logo-image" height="200px">
+            </div>
+            <div class="box2">
+            </div>
+            <div class="box3">
+            </div>
+            <div class="box1">
+            </div>
+            <div class="box2">
+            </div>
+            <div class="buttonDesign1">
+            <a href="/addUsers"><button><p class="anton-regular">Add User</p></button></a>
+            </div>
+            <div class="buttonDesign2">
+            <a href="/moneyTransfer"><button> <p class="anton-regular">Transfer</p></button></a>
+            </div>
+            <div class="box2">
+            </div>
+            <div class="join">
+            <a href="/tranasctionHistory"><button><p class="anton-regular">Log Report</p></button></a>
+            </div>
+        </div>
+        </div>
 </body>
 </html>
+
+

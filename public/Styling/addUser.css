@@ -1,0 +1,130 @@
+body{
+    margin: 0px;
+
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    background-image: url("./userImg1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-position: center;
+}
+
+.login
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+.formStyle
+{
+    background-image: transparent;
+    backdrop-filter: blur(30px);
+    height: 80vh;
+    width: 25vw;
+    border: 10px solid black;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    outline: #BFC9CA solid 10px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+
+.formBox
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.genderDiv
+{
+    grid-area: 3/ -3/ 4/ -1; 
+    display: flex; 
+    justify-content: space-around;
+    
+}
+
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2vw;
+    margin: 0px;
+    color: white;
+  }
+
+  .inputBox
+  {
+    height: 100%;
+    width: 90%;
+    box-sizing: border-box;
+    color: black;
+    border-radius: 10px;
+    padding-left: 4%;
+  }
+
+  .varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+    font-size: 100%;
+  }
+
+  .alfa-slab-one-regular {
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(3, 89, 3);
+    font-size: 100%;
+  }
+
+  .formSubmitButtonBox
+  {
+    grid-area: 4/ -3/ 5/ -1; 
+    display: flex; 
+    justify-content: center;
+  }
+  
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 1500,
+    'GRAD' 0,
+    'opsz' 54;
+    font-size: 3vw; 
+  }
+
+
+.femaleBox
+{
+    color: #FF69B4;
+}
+
+.maleBox
+{
+    color: #6495ED;
+}
+
+.subButton
+{
+    border-radius: 12px;
+    font-size: 3vh;
+    background-color: #BFC9CA;
+    font-family:Impact, 'Arial Narrow Bold', sans-serif;
+    font-weight: 1200;
+}

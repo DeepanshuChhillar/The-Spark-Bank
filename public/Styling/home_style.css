@@ -1,4 +1,76 @@
-body
+body{
+    margin: 0px;
+}
+
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3vw;
+  margin: 0px;
+  color: wheat;
+}
+
+.container
 {
-    background-color: aqua;
+    display: grid;
+    grid-template-rows: 2fr 6fr 2fr;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    height: 100vh;
+    background-image: url(./img_back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.box1
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:right;
+    padding-top: 1vh;
+}
+.box2
+{
+}
+.box3
+{
+}
+
+.buttonDesign1
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items:end;
+    padding-right: 1.5vw;
+}
+
+.buttonDesign2
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items:end;
+    padding-left: 1.5vw;
+}
+
+
+button
+{
+    height: 10vh;
+    width: 15vw;
+    border-radius: 22px;
+    background-color: transparent;
+    backdrop-filter: blur(12px); /* Apply blur effect */
+}
+
+.join
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: 3/ -5/ 4/ -1;
+    padding-top: 1vw;
 }
