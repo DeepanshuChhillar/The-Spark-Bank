@@ -13,7 +13,6 @@ body
     height: 100vh;
     display: grid;
     grid-template-rows: 1fr 9fr;
-    ;
 }
 
 .material-symbols-outlined {
@@ -32,7 +31,7 @@ body
   .headingBar
   {
     padding: 2vh;
-    height: 20vh;
+    height: 17vh;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
@@ -62,7 +61,6 @@ body
   {
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
     overflow-wrap: break-word;
     gap: 2vh;
     margin-right: 1vw;
@@ -84,6 +82,7 @@ body
       border: 4px solid black;
       outline: 5px solid grey;
       border-radius: 10px;
+      width: 95vw;
     }
 
     .blocks1 div
@@ -110,11 +109,11 @@ body
       font-weight: 700;
       font-style: normal;
       gap: 3vw;
-      font-size: large;
+      font-size: medium;
       border: 2px solid black;
       border-radius: 10px;
       outline: 1px solid grey;
-      height: 10vh;
+      height: 8vh;
     }
 
     .blocks1 .date
@@ -133,13 +132,13 @@ body
     .blocks1 .sno
     {
       text-align: center;
-      flex-basis: 5vw;
+      flex-basis: 8vw;
     }
 
     .blocks2 .sno
     {
       text-align: center;
-      flex-basis: 5vw;
+      flex-basis: 9vw;
     }
 
     .blocks1 .name1
