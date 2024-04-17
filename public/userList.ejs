@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="./Styling/userList.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="mainHeading">
+            <a href="/">Home</a><br>
+        </div>
+        <div class="contentPart">
+    <% for(var i=myArr.length-1;i>=0;i--) {%>
+        
+        <div class="divContent">
+            <div class="headerColor object"></div>
+            <div class="object">
+            <div class="Heading">User Name: </div>
+            <div class="Value"><%=myArr[i].userName%></div>
+        </div>
+            <div class="object">
+            <div class="Heading">Gender: </div>
+            <div class="Value"><%=myArr[i].gender%></div>
+        </div>
+            <div class="object">
+            <div class="Heading">User Id: </div>
+            <div class="Value"><%=myArr[i].userId%></div>
+        </div>
+            <div class="object">
+            <div class="Heading">Balance: </div>
+            <div class="Value">₹ <%=myArr[i].balanceAmount%></div>
+        </div>
+            <div class="object">
+            <div class="Heading">Date: </div>
+            <div class="Value"><%=myArr[i].date%></div>
+            </div>            
+        </div>
+        
+        <% }%>
+    </div>
+    </div>
+</body>
+</html>

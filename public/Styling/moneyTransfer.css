@@ -1,14 +1,16 @@
 body
 {
     margin: 0px;
-    background-image: url("./mtr11.jpg");
+    background-image: url("./userBg1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     box-sizing: border-box;
 }
 
 .container
 {
+
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-row: 1fr 2fr;

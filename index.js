@@ -7,16 +7,21 @@ const port = 3000;
 const dir_name = dirname(fileURLToPath(import.meta.url));
 const app = express();
 
-var mainDb = [{
-    userName: "Test_User1",
-    balanceAmount: 10000,
+var mainDb = [
+{
+    userName: "Name1",
+    balanceAmount: 5000,
+    gender: "Female",
+    date: "01-01-2024, 00:00:01 Am",
     userId: "SBank2024001"
 },
 {
-    userName: "Test_User2",
-    balanceAmount: 15000,
+    userName: "Name2",
+    balanceAmount: 7000,
+    gender: "Male",
+    date: "01-01-2024, 00:00:01 Am",
     userId: "SBank2024002"
-},
+}
 ];
 var idCount=2;
 var logBook=[];
@@ -38,15 +43,26 @@ app.get('/', (req, res) => {
 app.post("/createUser", (req, res) => {
     idCount++;
     var valu = parseInt(req.body["Amount"]);
+    var currentDate = new Date();
+    var indianDateTime = currentDate.toLocaleString('en-IN');
+    console.log(req.body);
     var obj1 = {
         userName: req.body["Name"],
         balanceAmount: valu,
         gender: req.body["gender"],
+        date: indianDateTime,
         userId: "SBank202400" + idCount
     }
     mainDb.push(obj1);
     console.log(mainDb);
-    res.redirect("/userDetails");
+    res.redirect("/userList");
+});
+
+app.get("/userList", (req,res)=>{
+    res.locals = {
+        myArr: mainDb
+    };
+    res.render(dir_name+"/public/userList.ejs");
 });
 
 app.get("/userDetails", (req, res) => {
