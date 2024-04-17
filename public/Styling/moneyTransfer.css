@@ -173,8 +173,9 @@ body
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 700;
     font-size: x-large;
+    background-color: palegoldenrod;;
     color: black;
-    background-color: red;
+   
     gap: 1vw;
   }
 
