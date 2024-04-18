@@ -78,7 +78,7 @@ app.post("/tranferRequest", (req, res) => {
     var amtt = req.body["Amount"];
     var amt = parseInt(amtt);
     calPerform(from,to,amt);
-    res.redirect("/userDetails");
+    res.redirect("/tranasctionHistory");
 });
 
 app.get("/addUsers", (req, res) => {

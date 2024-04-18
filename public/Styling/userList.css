@@ -13,6 +13,7 @@ body
     grid-template-rows: 2fr 8fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 3vw;
+    height: 100vh;
     
 }
 
@@ -34,11 +35,11 @@ body
     text-align: left;
     max-width: 10vw;
     font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-  border-right: 2px solid black;
-  padding: 2px;
+   font-optical-sizing: auto;
+   font-weight: 800;
+   font-style: normal;
+   border-right: 2px solid black;
+   padding: 2px;
 
 }
 
@@ -55,16 +56,21 @@ body
 {
     display: flex;
     flex-direction: column;
-    
     max-width: 20vw;
-    border: 2px solid black;
-    outline: 3px solid silver;
+    height: 21.5vh;
+    border: 3px solid black;
+    outline: 4px solid silver;
     background-color: bisque;
 }
 
 .mainHeading
 {
     grid-area: 1/ 1/ 2/ -1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    height: 20vh;
 }
 
 .contentPart
@@ -78,5 +84,57 @@ body
 .headerColor
 {
     min-height: 1vh;
-    background-color: aqua;
+    background-color: orange;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 1200,
+    'GRAD' 0,
+    'opsz' 54;
+    font-size: 3vw; 
+  }
+  .homeButton
+  {
+    color:#34495E;
+    margin: 3vh;
+  }
+
+  .rowdies-bold {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3vw;
+    backdrop-filter: blur(30px);
+    border: 3px solid black;
+    outline: 4px solid silver;
+    border-radius: 10px;
+    padding: 4px;
+  }
+
+  .text
+  {
+    padding-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+  }
+
+  
+  .headingBar img {
+    max-height: 100%; /* Set maximum height to prevent overflow */
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+}
+
+.headingBar
+{
+  grid-area: 1/ 1/ 2/ -1;
+  padding: 2vh;
+  height: 17vh;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
 }

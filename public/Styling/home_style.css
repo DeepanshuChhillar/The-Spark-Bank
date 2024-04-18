@@ -6,15 +6,15 @@ body{
   font-family: "Anton", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 3vw;
+  font-size: 2vw;
   margin: 0px;
-  color: wheat;
+  color: rgb(81, 255, 197)
 }
 
 .container
 {
     display: grid;
-    grid-template-rows: 2fr 6fr 2fr;
+    grid-template-rows: 2fr 6fr;
     grid-template-columns: 2fr 2fr 2fr 2fr;
     height: 100vh;
     background-image: url(./img_back.jpg);
@@ -31,36 +31,24 @@ body{
     justify-content:right;
     padding-top: 1vh;
 }
-.box2
-{
-}
-.box3
-{
-}
 
 .buttonDesign1
 {
+    grid-area: 2 / -4 / 3 / -2;
     display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items:end;
-    padding-right: 1.5vw;
+    flex-direction: column;
+    justify-content: end;
+    align-items:center;
+    gap: 1vh;
+    padding-bottom: 3vh;
 }
 
-.buttonDesign2
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items:end;
-    padding-left: 1.5vw;
-}
 
 
 button
 {
-    height: 10vh;
-    width: 15vw;
+    height: 8vh;
+    width: 12vw;
     border-radius: 22px;
     background-color: transparent;
     backdrop-filter: blur(12px); /* Apply blur effect */
@@ -73,4 +61,12 @@ button
     align-items: center;
     grid-area: 3/ -5/ 4/ -1;
     padding-top: 1vw;
+}
+
+footer
+{
+    grid-area: 3/ -5/ 4 /-1;
+    background-color: black;
+    color: whitesmoke;
+    text-align: right;
 }

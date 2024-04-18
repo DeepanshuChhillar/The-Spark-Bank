@@ -134,3 +134,21 @@ body{
     margin: 3vh;
     color: black;
 }
+
+.radioSize
+{
+  height: 3vh;
+  width: 3vw;
+}
+
+.footerClass
+{
+  color: azure;
+  padding-top: 2vh;
+}
+
+footer
+{
+  text-align: right;
+  background-color: black;
+}
